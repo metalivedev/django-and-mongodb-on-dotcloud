@@ -1,20 +1,21 @@
-Django and MongoDB on DotCloud
+Django and MongoDB on dotCloud
 ==============================
 
-This code shows how to run a very simple Django application on DotCloud,
+This code shows how to run a very simple Django application on dotCloud,
 but storing objects into MongoDB instead of a SQL database.
 It is fully functional, in the sense that you don't have any hand-editing
 to do to deploy it: it automatically deploys a MongoDB database,
 includes it in ``settings.py``, creates a superuser for you, and uses
 Django 1.3 ``collectstatic``. *Batteries Included!*
 
-To run this code on DotCloud, you need a `DotCloud account
-<https://www.dotcloud.com/accounts/register/>`_ (free tier available).
-Then clone this repository, and push it to DotCloud::
+To run this code on dotCloud, you need a `dotCloud account
+<https://www.dotcloud.com/accounts/register/>`_ .
+Then clone this repository, and push it to dotCloud::
 
   git clone git://github.com/jpetazzo/django-and-mongodb-on-dotcloud.git
   $ cd django-and-mongodb-on-dotcloud
-  $ dotcloud push hellodjangomongo
+  $ dotcloud create -f live hellodjangomongo
+  $ dotcloud push
 
 Happy hacking! Remember: each time you modify something, you need to
 git add + git commit your changes before doing ``dotcloud push``.
@@ -35,9 +36,9 @@ with at least three different methods:
   available offline!);
 * by browsing a more `traditional version 
   <http://docs.dotcloud.com/tutorials/python/django-mongodb/>`_ on
-  DotCloud's documentation website.
+  dotCloud's documentation website.
 
-You can also learn more by diving into `DotCloud documentations
+You can also learn more by diving into `dotCloud documentation
 <http://docs.dotcloud.com/>`_, especially the one for the `Python service
 <http://docs.dotcloud.com/services/python/>`_ and the `MongoDB service
 <http://docs.dotcloud.com/services/mongodb/>`_ which are used by this app.
